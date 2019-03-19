@@ -49,10 +49,11 @@ df.shape
 ```
 The set should contain 11,231 row and 26 columns.
 2. Examine the 26 columns in the dataset. They contain some important information, including:
-| Column | Description |
-| --- | --- |
-|YEAR, MONTH, DAY_OF_MONTH |Date the flight took place|
-|ORIGIN, DEST |Origin and destination |
-|CRS_DEP_TIME and CRS_ARR_TIM |Scheduled departure and arrival times|
-|ARR_DELAY | Difference between scheduled arrival time and actual arrivala time in mins|
-|ARR_DEL15 |Whether the flight was late by 15 mins or more|
+
+     YEAR, MONTH, DAY_OF_MONT: Date the flight took place
+     ORIGIN, DEST: Origin and destination
+     CRS_DEP_TIME and CRS_ARR_TIM: Scheduled departure and arrival times
+     ARR_DELAY: Difference between scheduled arrival time and actual arrivala time in mins
+     ARR_DEL15: Whether the flight was late by 15 mins or more
+     
+One of the most important things when preparing a dataset is selecting the "feature"
