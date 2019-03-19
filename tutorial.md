@@ -98,7 +98,9 @@ Let's get started... We're going to keep with flight theme and build a customer 
 14) Patterns -> BookFlight -> "I want to fly from {Location:Origin} to {Location:Destination}
 15) Patterns -> CancelFlight -> "I want to cancel my flight to {Location:Destination}"
 16) **Train**
-17) This exposes an API endpoint where I can send an utterance in JSON format, and it will return intent with entities in JSON. We could parse this to tie into a reservation app and actually schedule the flight.
+17) **test**
+18) **Publish**
+19) This exposes an API endpoint where I can send an utterance in JSON format, and it will return intent with entities in JSON. We could parse this to tie into a reservation app and actually schedule the flight.
 
 ## Wrap-up
 
