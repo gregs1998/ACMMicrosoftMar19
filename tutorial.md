@@ -76,5 +76,30 @@
 7) **Shift+Enter**
 
 # LUIS
+LUIS, Language Understanding Intelligent Service, helps your application understand what a person wants in their own words. We can use machine learning to allow developers to build applications that can receive user input in natural language, then extract meaning from it.
 
+1) The application passes in an utterance (written, natural language phrase) to the API endpoint
+2) It recognizes intent (what the user wants to do), and entities (*how* the user wants to do it, modifiers of intent)
+Let's get started... We're going to keep with flight theme and build a customer service bot model for an airline
 
+1) Go to www.luis.ai
+2) Login, Create new app
+3) Give name: AirlineHelpBot
+4) We want to recognize, for demo purposes, two intents: BookFlight and CancelFlight
+5) Intents -> **+ Create new intent**
+6) *BookFlight*
+7) Intents -> **+ Create new intent**
+8) *CancelFlight*
+9) We want to add entity: Location (type: list)... Add roles to entity: destination and origin
+10) We need to add normalized values: Seattle, Lexington, Miami, Los Angeles, New York
+11) Add synonyms: LA, NYC
+12) We need to train with potential user patterns of text to book and cancel a flight
+13) Patterns -> Select an Intent -> BookFlight: "I want to book a flight from {Location:Origin} to {Location:Destination}
+14) Patterns -> BookFlight -> "I want to fly from {Location:Origin} to {Location:Destination}
+15) Patterns -> CancelFlight -> "I want to cancel my flight to {Location:Destination}"
+16) **Train**
+17) This exposes an API endpoint where I can send an utterance in JSON format, and it will return intent with entities in JSON. We could parse this to tie into a reservation app and actually schedule the flight.
+
+## Wrap-up
+
+Questions??
