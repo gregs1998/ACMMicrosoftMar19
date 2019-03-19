@@ -27,4 +27,32 @@ Jupyter notebooks are highly interactive and provide a great platform for manipu
 2. Click the **Run** button to execute the `curl` command.
 ![Importing a dataset](https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-import-dataset.png)
 *Importing a dataset*
-3. 
+3. In the notebook's second cell, enter the following Python code to: load **flightdata.csv**, create a Pandas DataFrame frome it, and display the first five rows.
+```python
+import pandas as pd
+
+df = pd.read_csv('flightdata.csv')
+df.head()
+```
+> A **DataFrame** is a two-dimensional labeled data structure. The columns can be of different types, just like a spreadsheet or database table.
+4. Click the **Run** button to execute the code, your output should resemble the output below.
+![Loading the dataset](https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-load-dataset.png)
+*Loading the dataset*
+This **DataFrame** contains on-time arrival information for an unmentioned major U.S. airline. It has 11,000 rows and 26 columns. Each row represents a flight and contains information like origin airport, destination, scheduled departure time, and whether the flight was on-time or late.
+
+## Clean and Prepare the Data
+
+In this section, we'll be examining the DataFrame we created earlier -- and the data inside it -- more closely.
+1. To get a count of how many rows are contained in the dataset, type the following statement into an empty cell at the end of the notebook and run it:
+```python
+df.shape
+```
+The set should contain 11,231 row and 26 columns.
+2. Examine the 26 columns in the dataset. They contain some important information, including:
+| Column | Description |
+| --- | --- |
+|YEAR, MONTH, DAY_OF_MONTH |Date the flight took place|
+|ORIGIN, DEST |Origin and destination |
+|CRS_DEP_TIME and CRS_ARR_TIM |Scheduled departure and arrival times|
+|ARR_DELAY | Difference between scheduled arrival time and actual arrivala time in mins|
+|ARR_DEL15 |Whether the flight was late by 15 mins or more|
